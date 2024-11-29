@@ -22,6 +22,11 @@ jobs:
             torchvision-version: 0.10.1
             python-version: 3.9
             pytorch-release: earliest
+          - pytorch-version: 1.9.0
+            torchvision-version: 0.10.0
+            python-version: 3.9
+            os: macos-latest
+            pytorch-release: earliest
           - pytorch-version: 1.11.0
             torchvision-version: 0.12.0
             python-version: '3.10'
