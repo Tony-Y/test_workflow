@@ -24,10 +24,6 @@ jobs:
             python-version: '3.10'
             pytorch-release: earliest
           - pytorch-version: 2.5.1
-            python-version: 3.9
-            pytorch-release: latest
-          - pytorch-version: 2.5.1
-            python-version: '3.10'
             pytorch-release: latest
           
     steps:
