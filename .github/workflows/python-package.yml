@@ -19,18 +19,23 @@ jobs:
         pytorch-release: ["earliest", "latest"]
         include:
           - pytorch-version: 1.9.1
+            torchvision-version: 0.10.1
             python-version: 3.9
             pytorch-release: earliest
           - pytorch-version: 1.11.0
+            torchvision-version: 0.12.0
             python-version: '3.10'
             pytorch-release: earliest
           - pytorch-version: 2.0.1
+            torchvision-version: 0.15.2
             python-version: 3.11
             pytorch-release: earliest
           - pytorch-version: 2.2.2
+            torchvision-version: 0.17.2
             python-version: 3.12
             pytorch-release: earliest
           - pytorch-version: 2.5.1
+            torchvision-version: 0.20.1
             pytorch-release: latest
           - pytorch-option: '+cpu'
           - pytorch-option: ''
@@ -47,6 +52,7 @@ jobs:
         python -m pip install --upgrade pip
         pip install 'numpy<2'
         pip install torch==${{ matrix.pytorch-version }}${{ matrix.pytorch-option }} -f https://download.pytorch.org/whl/torch
+        pip install torchvision==${{ matrix.torchvision-version }}${{ matrix.pytorch-option }} -f https://download.pytorch.org/whl/torchvision
     - name: Hello World
       run: |
         echo 'Hello World!'
