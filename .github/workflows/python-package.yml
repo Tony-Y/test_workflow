@@ -15,15 +15,20 @@ jobs:
       fail-fast: false
       matrix:
         python-version: ["3.9", "3.10"]
+        pytorch-release: ["earliest", "latest"]
         include:
           - pytorch-version: 1.9.1
             python-version: 3.9
+            pytorch-release: earliest
           - pytorch-version: 1.11.0
             python-version: '3.10'
+            pytorch-release: earliest
           - pytorch-version: 2.5.1
             python-version: 3.9
+            pytorch-release: latest
           - pytorch-version: 2.5.1
             python-version: '3.10'
+            pytorch-release: latest
           
     steps:
     - uses: actions/checkout@v4
